@@ -19,7 +19,7 @@ namespace DataAccessLayer.DbInitialize
             {
                 return; // DB has been seeded
             }
-            // dbContext.Countries.AddRange(LocationParser.GetCountries());
+           
 
             Role adminRole = new Role { Name = "Admin" };
             Role userRole = new Role { Name = "User" };

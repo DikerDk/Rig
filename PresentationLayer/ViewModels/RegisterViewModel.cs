@@ -10,6 +10,7 @@ namespace PresentationLayer.ViewModels
 {
     public class RegisterViewModel
     {
+
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
@@ -28,9 +29,7 @@ namespace PresentationLayer.ViewModels
         [Required]
         [RegularExpression(@"^\+[0-9]{11,12}$", ErrorMessage = "Wrong phone number")]
         public string Phone { get; set; }
-        [Required]
-        public string Location { get; set; }
-
+    
         [Required]
         public Gender Gender { get; set; }
 

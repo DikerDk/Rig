@@ -12,5 +12,6 @@ namespace BusinessLayer.Interface
     {
         Task<OperationDetails> Create(UserDTO userDto);
         Task<bool> Authenticate(UserDTO userDto);
+
     }
 }

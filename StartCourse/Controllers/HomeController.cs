@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using StartCourse.Models;
@@ -11,13 +12,14 @@ namespace StartCourse.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+      
+        private readonly IMapper _mapper;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IMapper mapper)
         {
-            _logger = logger;
+            
+            _mapper = mapper;
         }
-
         public IActionResult Index()
         {
             return View();

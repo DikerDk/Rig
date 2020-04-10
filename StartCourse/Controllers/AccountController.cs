@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace StartCourse.Controllers
 {
+    
     public class AccountController : Controller
     {
         private readonly IUserService _userService;
@@ -19,6 +20,8 @@ namespace StartCourse.Controllers
             _userService = userService;
             AuthenticationManager = authenticationManager;
         }
+
+      
         public IActionResult Login()
         {
             return View();
@@ -46,11 +49,14 @@ namespace StartCourse.Controllers
             return View(model);
         }
 
+     
         public IActionResult Register()
         {
             return View();
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Register(RegisterViewModel model)
         {
             if (ModelState.IsValid)

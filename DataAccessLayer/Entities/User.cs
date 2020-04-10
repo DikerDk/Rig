@@ -11,8 +11,6 @@ namespace DataAccessLayer.Entities
     public class User: IdentityUser
     {
         public string Name { get; set;}
-        public int ui { get; set; }
-
         public string Phone { get; set; }
         public DateTime Birthday { get; set; }
         public Gender Gender { get; set; }

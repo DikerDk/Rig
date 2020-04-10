@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>@ViewData["Title"] - TIR</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -8,34 +9,34 @@
     <meta name="description" content="">
     <title>CarForYou - Responsive Car Dealer HTML5 Template</title>
     <!--Bootstrap -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" type="text/css">
     <!--Custome Style -->
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <link rel="stylesheet" href="~/css/style.css" type="text/css">
     <!--OWL Carousel slider-->
-    <link rel="stylesheet" href="assets/css/owl.carousel.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/owl.transitions.css" type="text/css">
+    <link rel="stylesheet" href="~/css/owl.carousel.css" type="text/css">
+    <link rel="stylesheet" href="~/css/owl.transitions.css" type="text/css">
     <!--slick-slider -->
-    <link href="assets/css/slick.css" rel="stylesheet">
+    <link href="~/css/slick.css" rel="stylesheet">
     <!--bootstrap-slider -->
-    <link href="assets/css/bootstrap-slider.min.css" rel="stylesheet">
+    <link href="~/css/bootstrap-slider.min.css" rel="stylesheet">
     <!--FontAwesome Font Style -->
-    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- SWITCHER -->
-    <link rel="stylesheet" id="switcher-css" type="text/css" href="assets/switcher/css/switcher.css" media="all" />
-    <link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/red.css" title="red" media="all" data-default-color="true" />
-    <link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/orange.css" title="orange" media="all" />
-    <link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/blue.css" title="blue" media="all" />
-    <link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/pink.css" title="pink" media="all" />
-    <link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/green.css" title="green" media="all" />
-    <link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/purple.css" title="purple" media="all" />
+    <link rel="stylesheet" id="switcher-css" type="text/css" href="~/switcher/css/switcher.css" media="all" />
+    <link rel="alternate stylesheet" type="text/css" href="~/switcher/css/red.css" title="red" media="all" data-default-color="true" />
+    <link rel="alternate stylesheet" type="text/css" href="~/switcher/css/orange.css" title="orange" media="all" />
+    <link rel="alternate stylesheet" type="text/css" href="~/switcher/css/blue.css" title="blue" media="all" />
+    <link rel="alternate stylesheet" type="text/css" href="~/switcher/css/pink.css" title="pink" media="all" />
+    <link rel="alternate stylesheet" type="text/css" href="~/switcher/css/green.css" title="green" media="all" />
+    <link rel="alternate stylesheet" type="text/css" href="~/switcher/css/purple.css" title="purple" media="all" />
 
     <!-- Fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/images/favicon-icon/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/favicon-icon/apple-touch-icon-114-precomposed.html">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/favicon-icon/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="assets/images/favicon-icon/apple-touch-icon-57-precomposed.png">
-    <link rel="shortcut icon" href="assets/images/favicon-icon/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="~/images/favicon-icon/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="~/images/favicon-icon/apple-touch-icon-114-precomposed.html">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="~/images/favicon-icon/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="~/images/favicon-icon/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="~/images/favicon-icon/favicon.png">
     <!-- Google-Font-->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -75,7 +76,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-3 col-md-2">
-                        <div class="logo"> <a href="index.html"><img src="assets/images/logo.png" alt="image" /></a> </div>
+                        <div class="logo"> <a href="index.html"><img src="~/images/logo.png" alt="image" /></a> </div>
                     </div>
                     <div class="col-sm-9 col-md-10">
                         <div class="header_info">
@@ -98,6 +99,7 @@
                                     <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                                 </ul>
                             </div>
+
                             <div class="login_btn"> <a href="#loginform" class="btn btn-xs uppercase" data-toggle="modal" data-dismiss="modal">Login / Register</a> </div>
                         </div>
                     </div>
@@ -112,19 +114,7 @@
                     <button id="menu_slide" data-target="#navigation" aria-expanded="false" data-toggle="collapse" class="navbar-toggle collapsed" type="button"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
                 </div>
                 <div class="header_wrap">
-                    <div class="user_login">
-                        <ul>
-                            <li class="dropdown">
-                                <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-circle" aria-hidden="true"></i> Jhon Anderson <i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="profile-settings.html">Profile Settings</a></li>
-                                    <li><a href="my-vehicles.html">My Vehicles</a></li>
-                                    <li><a href="post-vehicle.html">Post a Vehicle</a></li>
-                                    <li><a href="#">Sign Out</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
+                  
                     <div class="header_search">
                         <div id="search_toggle"><i class="fa fa-search" aria-hidden="true"></i></div>
                         <form action="#" method="get" id="header-search-form">
@@ -136,11 +126,8 @@
                 <div class="collapse navbar-collapse" id="navigation">
                     <ul class="nav navbar-nav">
                         <li class="dropdown">
-                            <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="index.html">Home Page 1</a></li>
-                                <li><a href="index-2.html">Home Page 2</a></li>
-                            </ul>
+                            <a asp-controller="Home" asp-action="Index">Головна</a>
+
                         </li>
                         <li><a href="about-us.html">About Us</a></li>
                         <li class="dropdown">
@@ -185,11 +172,8 @@
         <!-- Navigation end -->
     </header>
 
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+    @RenderBody()
+
 
     <!--Brands-->
     <section class="brand-section gray-bg">
@@ -199,11 +183,11 @@
             </div>
             <div class="brand-logo-list">
                 <div id="popular_brands">
-                    <div><a href="#"><img src="assets/images/brand-logo-1.png" class="img-responsive" alt="image"></a></div>
-                    <div><a href="#"><img src="assets/images/brand-logo-2.png" class="img-responsive" alt="image"></a></div>
-                    <div><a href="#"><img src="assets/images/brand-logo-3.png" class="img-responsive" alt="image"></a></div>
-                    <div><a href="#"><img src="assets/images/brand-logo-4.png" class="img-responsive" alt="image"></a></div>
-                    <div><a href="#"><img src="assets/images/brand-logo-5.png" class="img-responsive" alt="image"></a></div>
+                    <div><a href="#"><img src="~/images/brand-logo-1.png" class="img-responsive" alt="image"></a></div>
+                    <div><a href="#"><img src="~/images/brand-logo-2.png" class="img-responsive" alt="image"></a></div>
+                    <div><a href="#"><img src="~/images/brand-logo-3.png" class="img-responsive" alt="image"></a></div>
+                    <div><a href="#"><img src="~/images/brand-logo-4.png" class="img-responsive" alt="image"></a></div>
+                    <div><a href="#"><img src="~/images/brand-logo-5.png" class="img-responsive" alt="image"></a></div>
                 </div>
             </div>
         </div>
@@ -290,22 +274,24 @@
     </footer>
     <!-- /Footer-->
     <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/interface.js"></script>
+    
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/interface.js"></script>
     <!--Switcher-->
-    <script src="assets/switcher/js/switcher.js"></script>
+    <script src="~/switcher/js/switcher.js"></script>
     <!--bootstrap-slider-JS-->
-    <script src="assets/js/bootstrap-slider.min.js"></script>
+    <script src="~/js/bootstrap-slider.min.js"></script>
     <!--Slider-JS-->
-    <script src="assets/js/slick.min.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-
+    <script src="~/js/slick.min.js"></script>
+    <script src="~/js/owl.carousel.min.js"></script>
     <script>'undefined' === typeof _trfq || (window._trfq = []); 'undefined' === typeof _trfd && (window._trfd = []), _trfd.push({ 'tccl.baseHost': 'secureserver.net' }), _trfd.push({ 'ap': 'cpsh' }, { 'server': 'p3plcpnl033' }) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script>
     <script src='../../../img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script>
     <!-- Mirrored from themes.webmasterdriver.net/carforyou/demo/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Oct 2018 08:12:34 GMT -->
 
+
     @RenderSection("Scripts", required: false)
 </body>
+
 
 </html>

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using DataAccessLayer.DbInitialize;
 using DataAccessLayer.EF;
+using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -16,14 +17,14 @@ namespace StartCourse
     {
         public static void Main(string[] args)
         {
-            var host = CreateHostBuilder(args).Build();
+            var host = BuildWebHost(args);
 
             using (var scope = host.Services.CreateScope())
             {
                 var services = scope.ServiceProvider;
                 try
                 {
-                   var dbContext = services.GetRequiredService<AppDbContext>();
+                    var dbContext = services.GetRequiredService<AppDbContext>();
                     DbInitializer.Seed(dbContext);
                 }
                 catch (Exception ex)
@@ -36,11 +37,9 @@ namespace StartCourse
             host.Run();
         }
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                });
+        public static IWebHost BuildWebHost(string[] args) =>
+        WebHost.CreateDefaultBuilder(args)
+           .UseStartup<Startup>()
+           .Build();
     }
 }

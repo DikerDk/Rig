@@ -1,0 +1,57 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using DataAccessLayer.Entities
+@inject SignInManager<User> SignInManager
+@inject UserManager<User> UserManager
+
+@if (SignInManager.IsSignedIn(User))
+{
+    <div class="user_login">
+        <ul>
+            <li class="dropdown">
+                <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-circle" aria-hidden="true"></i> Jhon Anderson <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="profile-settings.html">Profile Settings</a></li>
+                    <li><a href="my-vehicles.html">My Vehicles</a></li>
+                    <li><a href="post-vehicle.html">Post a Vehicle</a></li>
+                    <li><a href="#">Sign Out</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <form asp-area="" asp-controller="Account" asp-action="Logout" method="post" id="logoutForm" class="navbar-right">
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <button type="submit" class="btn btn-link navbar-btn navbar-link">Log out</button>
+            </li>
+        </ul>
+    </form>
+    @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+    {
+        <ul class="nav navbar-nav navbar-right">
+
+            <li>@Html.ActionLink("Categories", "Categories", "Admin")</li>
+            <li><a asp-area="Roles" asp-controller="Roles" asp-action="Index">Roles manager</a></li>
+            <li><a asp-area="Users" asp-controller="Users" asp-action="Index">Manage Users</a></li>
+
+            <li><a asp-area="Account" asp-controller="Profile" asp-action="Index" asp-route-id=""><span class="glyphicon glyphicon-user"></span> @User.Identity.Name Profile</a></li>
+        </ul>
+    }
+    else
+    {
+
+        <ul class="nav navbar-nav navbar-right">
+
+            <li><a asp-area="Account" asp-controller="Profile" asp-action="Index" asp-route-id=""><span class="glyphicon glyphicon-user"></span> @User.Identity.Name Profile</a></li>
+        </ul>
+
+    }
+
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li><a asp-area="" asp-controller="Account" asp-action="Register">Register</a></li>
+        <li><a asp-area="" asp-controller="Account" asp-action="Login">Log in</a></li>
+    </ul>
+}
+

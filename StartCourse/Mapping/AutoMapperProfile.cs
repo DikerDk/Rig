@@ -17,6 +17,8 @@ namespace StartCourse.Mapping
             CreateMap<User, UserDTO>();
             CreateMap<UserDTO, User>();
             CreateMap<LoginViewModel, UserDTO>();
+            CreateMap<RegisterViewModel, UserDTO>()
+            .ForMember(dest => dest.Role, opts => opts.MapFrom(src => "user"));
 
         }
     }
